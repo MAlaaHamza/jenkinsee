@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git url: 'https://github.com/<MAlaaHamza>/<jenkinsee>.git', credentialsId: '<11aa3d1d5e8f5d38f0ab15f03b10166339>'
+            }
+        }
+        stage('Execute Shell Command') {
+            steps {
+                sh 'ls -la'
+            }
+        }
+    }
+}
